@@ -1,7 +1,8 @@
 <template>
   <Navbar></Navbar>
-  <div id="nav"></div>
-  <router-view />
+  <section id="main" class="section">
+    <router-view />
+  </section>
 </template>
 
 <script>
@@ -14,4 +15,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#main {
+  text-align: center;
+}
+</style>
