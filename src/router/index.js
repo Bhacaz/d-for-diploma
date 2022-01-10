@@ -4,7 +4,7 @@ import Calculator from "../views/Calculator.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/home",
     name: "Home",
     component: Home,
   },
@@ -12,6 +12,7 @@ const routes = [
     path: "/calculator",
     name: "Calculator",
     component: Calculator,
+    alias: "/",
   },
 ];
 

@@ -1,15 +1,9 @@
 <template>
   <nav class="navbar" role="navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          width="112"
-          height="28"
-        />
-      </a>
+      <a class="navbar-item" href="/"> D for Diploma </a>
       <a class="navbar-item">
-        <router-link to="/">Home</router-link>
+        <router-link to="/home">Home</router-link>
       </a>
       <a class="navbar-item">
         <router-link to="/calculator">Calculator</router-link>
