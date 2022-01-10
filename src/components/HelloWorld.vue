@@ -1,4 +1,7 @@
 <template>
+  <h1 class="title">Title</h1>
+  <progress class="progress is-small is-primary" max="100">15%</progress>
+
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
