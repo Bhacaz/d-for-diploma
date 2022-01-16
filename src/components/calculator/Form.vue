@@ -7,7 +7,12 @@
       <div class="field-body">
         <div class="field">
           <p class="control">
-            <input class="input is-rounded" type="number" v-model="goalInput" />
+            <input
+              class="input is-rounded"
+              type="number"
+              v-model="stats.goalInput"
+              @input="calculate"
+            />
           </p>
         </div>
       </div>
@@ -23,8 +28,8 @@
             <input
               class="input is-rounded"
               type="number"
-              placeholder="Rounded input"
-              v-model="cumulatedInput"
+              v-model="stats.cumulatedInput"
+              @input="calculate"
             />
           </p>
         </div>
@@ -41,16 +46,14 @@
             <input
               class="input is-rounded"
               type="number"
-              placeholder="Rounded input"
-              v-model="currentMeanInput"
+              v-model="stats.currentMeanInput"
+              @input="calculate"
             />
           </p>
         </div>
       </div>
     </div>
   </section>
-
-  <button class="btn btn-primary hidden" :click="calculate()">Calculate</button>
 
   <h1 class="title">{{ calculated }}%</h1>
 </template>
@@ -62,17 +65,19 @@ export default {
   data() {
     return {
       calculated: 0,
-      goalInput: 0,
-      cumulatedInput: 0,
-      currentMeanInput: 0,
+      stats: {
+        goalInput: 60,
+        cumulatedInput: null,
+        currentMeanInput: null,
+      },
     };
   },
   methods: {
     calculate() {
       this.calculated = basicFormula(
-        this.goalInput,
-        this.cumulatedInput,
-        this.currentMeanInput
+        this.stats.goalInput,
+        this.stats.cumulatedInput,
+        this.stats.currentMeanInput
       );
     },
   },
@@ -81,6 +86,8 @@ export default {
 
 <style scoped>
 #form-section {
+  max-width: 40em;
+  margin: auto;
 }
 
 #form-section .field {
