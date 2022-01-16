@@ -20,6 +20,11 @@ export default {
 
 <style scoped>
 .navbar a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(122, 248, 218);
+  text-decoration: underline;
+}
+
+.navbar-home-link {
+  padding-right: 2em;
 }
 </style>

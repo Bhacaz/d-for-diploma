@@ -1,34 +1,59 @@
 @charset "utf-8";
 
+// https://dribbble.com/shots/17280582-Scholarship-Website
+
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 // Set your brand colors
 $purple: #8A4D76;
-$pink: #FA7C91;
+$pink: #ff4fb7;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
+$body-background-color-primary: rgb(12,15,35);
+$body-background-color-secondary: rgb(36,37,58);
+
+// Primary colors
+$primary: rgb(122, 248, 218);
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+//$primary: $purple;
+$link: $primary;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: $body-background-color-primary;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
+$text: #FAFBFD;
+$text-strong: $text;
+
+// navbar
+$navbar-background-color: $body-background-color-secondary;
+$navbar-item-color: white;
+$navbar-item-active-color: $primary;
+$navbar-item-hover-color: $primary;
+
+// input
+$input-background-color: rgba(255, 255, 255, 0.2);
+$input-focus-box-shadow-color: white;
+$input-focus-border-color: white;
+$input-focus-box-shadow-size: 0 0 0 0.05em;
 
 // Bulma Import
 @import '~bulma';
 
 .hidden {
   display: none;
+}
+
+body {
+  height: 100vh;
 }
