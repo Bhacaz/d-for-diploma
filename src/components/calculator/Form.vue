@@ -90,6 +90,7 @@ export default {
   margin: auto;
 }
 
-#form-section .field {
+#form-section .field-label {
+  min-width: 8em;
 }
 </style>
