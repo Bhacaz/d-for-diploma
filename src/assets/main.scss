@@ -43,8 +43,8 @@ $navbar-item-hover-color: $primary;
 
 // input
 $input-background-color: rgba(255, 255, 255, 0.2);
-$input-focus-box-shadow-color: white;
-$input-focus-border-color: white;
+$input-focus-box-shadow-color: $primary;
+$input-focus-border-color: $primary;
 $input-focus-box-shadow-size: 0 0 0 0.05em;
 
 // Bulma Import

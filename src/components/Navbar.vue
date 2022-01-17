@@ -3,10 +3,10 @@
     <div class="navbar-brand">
       <a class="navbar-item" href="/"> D for Diploma </a>
       <a class="navbar-item">
-        <router-link to="/home">Home</router-link>
+        <router-link to="/calculator">Calculator</router-link>
       </a>
       <a class="navbar-item">
-        <router-link to="/calculator">Calculator</router-link>
+        <router-link to="/exams">Exams</router-link>
       </a>
     </div>
   </nav>
