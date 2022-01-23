@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .navbar a.router-link-exact-active {
-  color: rgb(122, 248, 218);
+  color: white;
   text-decoration: underline;
 }
 

@@ -12,18 +12,18 @@ $pink: #ff4fb7;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
-$body-background-color-primary: rgb(12,15,35);
-$body-background-color-secondary: rgb(36,37,58);
+$body-background-color-primary: #F3F1DB;
+$body-background-color-secondary: #E6E1B3;
 
 // Primary colors
-$primary: rgb(122, 248, 218);
+$primary: #A90021;
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 //$primary: $purple;
-$link: $primary;
+$link: white;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
@@ -32,21 +32,22 @@ $body-background-color: $body-background-color-primary;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
-$text: #FAFBFD;
+$text: #333333;
 $text-strong: $text;
 
 // navbar
-$navbar-background-color: $body-background-color-secondary;
+$navbar-background-color: $primary;
 $navbar-item-color: white;
-$navbar-item-active-color: $primary;
-$navbar-item-hover-color: $primary;
+//$navbar-item-active-color: white;
+//$navbar-item-active-color: #91364E;
+//$navbar-item-hover-color: #91364E;
 
 // input
-$input-background-color: rgba(255, 255, 255, 0.2);
-$input-focus-box-shadow-color: $primary;
+//$input-background-color: rgba(255, 255, 255, 0.2);
+//$input-focus-box-shadow-color: $primary;
 $input-focus-border-color: $primary;
-$input-focus-box-shadow-size: 0 0 0 0.05em;
-
+//$input-focus-box-shadow-size: 0 0 0 0.05em;
+$input-border-color: #E0E0E0;
 // Bulma Import
 @import '~bulma';
 
