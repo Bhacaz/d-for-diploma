@@ -1,4 +1,6 @@
-# d-for-diploma
+# [d-for-diploma](https://d-for-diploma.vercel.app/#/exams)
+
+Simple Web app to calculate how many you need to have on your next exams to meat your goals of simply to pass 😏.
 
 ## Project setup
 ```
