@@ -39,6 +39,9 @@
         v-model="exam.weighting"
         @input="calculate"
       />
+      <span class="icon remove-exam" @click="removeExam(exam)">
+        <i class="fas fa-times has-text-danger"></i>
+      </span>
     </div>
 
     <button class="button is-primary" @click="addExam">
@@ -48,17 +51,28 @@
     </button>
   </section>
 
-  <h1 class="title">{{ calculated }}%</h1>
+  <div class="columns is-mobile">
+    <div class="column">
+      <h2 class="subtitle">Mean</h2>
+      <h1 class="title">{{ calculatedMean }}%</h1>
+    </div>
+    <div class="column">
+      <h2 class="subtitle">To have</h2>
+      <h1 class="title">{{ calculated }}%</h1>
+    </div>
+  </div>
 </template>
 
 <script>
 import { eachExamsFormula } from "../models/formulaService.js";
+import { eachExamsMeanFormula } from "../models/formulaService.js";
 
 export default {
   name: "ExamListCalculator",
   data() {
     return {
       calculated: 0,
+      calculatedMean: 0,
       goalInput: 80,
       exams: [
         {
@@ -74,6 +88,13 @@ export default {
     },
     calculate() {
       this.calculated = eachExamsFormula(this.goalInput, this.exams);
+      this.calculatedMean = eachExamsMeanFormula(this.exams);
+    },
+    removeExam(exam) {
+      this.exams = this.exams.filter((value) => {
+        return value !== exam;
+      });
+      this.calculate();
     },
   },
 };
@@ -91,8 +112,8 @@ export default {
   margin: auto;
   max-width: 40em;
   display: flex;
-  direction: row;
-  padding-bottom: 1.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
 }
 
 .input {
@@ -107,5 +128,10 @@ export default {
 .input.right {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+}
+
+.remove-exam {
+  margin: auto;
+  width: 5em;
 }
 </style>
